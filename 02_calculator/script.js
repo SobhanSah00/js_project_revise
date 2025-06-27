@@ -1,5 +1,8 @@
 const display = document.getElementById('display')
 const buttons = document.querySelectorAll('.btn')
+const histroyList = document.getElementById('historyList')
+
+const histroy = []
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
@@ -7,7 +10,10 @@ buttons.forEach(button => {
 
         if (value == '=') {
             try {
-                display.value = eval(display.value)
+                const expression = display.value
+                const result = eval(display.value)
+                display.value = result
+                addHistory(expression,result)
             }
             catch (e) {
                 display.value = ' error '
@@ -21,3 +27,10 @@ buttons.forEach(button => {
         }
     })
 })
+
+function addHistory(expression,result) {
+    const li = document.createElement('li')
+    li.textContent = `${expression} = ${result}`
+    // histroyList.appendChild(li)
+    histroyList.prepend(li)
+}
