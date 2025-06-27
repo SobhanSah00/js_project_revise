@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    background : #405fac;
+}
+
+.Container {
+    width: 400px;
+    margin: auto;
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.InputGroup {
+    display: flex;
+    gap : 10px
+}
+
+#taskinput {
+    flex : 1;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+}
+
+#addButton {
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+}
+
+#TaskList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    background: #adb2ae;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.task-item span.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.task-item button {
+  margin-left: 10px;
+  cursor: pointer;
+}
